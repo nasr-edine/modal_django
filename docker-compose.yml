@@ -3,9 +3,7 @@ version: "3.7"
 services:
   web:
     build: .
-    # command: python /app/manage.py runserver 0.0.0.0:8000
-    command: gunicorn modal_project.wsgi' -b 0.0.0.0:$PORT
-
+    command: python /app/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
