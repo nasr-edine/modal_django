@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+{% if user.is_authenticated %} 
+<div class="jumbotron">
+  <h1 class="display-4">Modal app</h1>
+  <p class="lead">A short project for testing modal in Django</p>
+  <p class="lead">            
+<!-- BUTTON TO TRIGGER THE ACTION -->
+<p>
+  <button
+    type="button"
+    class="btn btn-primary btn-lg ml-4"
+    data-toggle="modal"
+    data-target="#changeModal"
+    href="{% url 'change_email' user.id %}"
+  >
+    Update email
+  </button>
+</p>
+</p>
+</div>
+
+<table class="table" id="user-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>username</th>
+      <th>email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- THE MODAL WE WILL BE USING -->
+<div class="modal fade" id="changeModal">
+  <div class="modal-dialog">
+    <div class="modal-content">{% include 'change_email.html' %}</div>
+  </div>
+</div>
+{% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a> |
+    <a href="{% url 'signup' %}">Sign Up</a> 
+{% endif %} 
+{% endblock %}

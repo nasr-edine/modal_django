@@ -1,0 +1,25 @@
+{% load static %}
+
+<form action="{% url 'change_email' user.id %}" method="post">
+  <div class="modal-header">
+    <h4 class="modal-title" id="myModalLabel">Hi, {{ user.username }}</h4>
+  </div>
+  <div class="modal-body">
+    {% csrf_token %}
+    <label for="exampleInputEmail1">Enter a new email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      aria-describedby="emailHelp"
+      placeholder="{{ user.email }}"
+    />
+  </div>
+  <div class="modal-footer">
+    <input type="submit" class="btn btn-primary" value="Save" />
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+      Close
+    </button>
+  </div>
+</form>

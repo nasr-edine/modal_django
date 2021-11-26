@@ -1,0 +1,15 @@
+# Django #
+*.py[cod]
+*$py.class
+__pycache__/
+db.sqlite3
+
+# Environments 
+venv/ 
+
+# Visual Studio Code # 
+.vscode/* 
+
+
+# migrations database
+migrations/
