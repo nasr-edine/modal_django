@@ -39,6 +39,12 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
+Reboot virtual env
+
+```bash
+deactivate; . venv/bin/activate
+```
+
 Make Migration
 
 ```bash
