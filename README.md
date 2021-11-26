@@ -12,13 +12,13 @@ Basic authentication system in django with modal form for update email and docke
 clone repository locally
 
 ```bash
-git clone https://github.com/nasr-edine/ayomi_project.git
+git clone https://github.com/nasr-edine/modal_django.git
 ```
 
-Move to the ayomi_project root folder with:
+Move to the modal_django root folder with:
 
 ```bash
-cd ayomi_project
+cd modal_django
 ```
 
 Create a virtual environment in root folder of project
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 Make Migration
 
 ```bash
-django mm
+django mm modal_app
 ```
 
 Migrate
@@ -75,7 +75,13 @@ Go to your browser to view django website with locahost URL
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 You can create a user with the URL below or click on signup button
-[http://127.0.0.1:8000/users/signup/](http://127.0.0.1:8000/users/signup/)
+[http://127.0.0.1:8000/users/signup/](http://127.0.0.1:8000/signup/)
 
 After signup, you can login with your credentials (username and password)
-[http://127.0.0.1:8000/users/login/](http://127.0.0.1:8000/users/login/)
+[http://127.0.0.1:8000/users/login/](http://127.0.0.1:8000/login/)
+
+After login, you can update email with button Update email in home page
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+You can logout with button logout in the bar at the top-right corner or with the link below:
+[http://127.0.0.1:8000/logout/](http://127.0.0.1:8000/logout/)
