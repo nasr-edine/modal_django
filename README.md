@@ -77,6 +77,17 @@ You can also run the app with docker
 docker-compose up
 ```
 
+I add a small js code in my templates for check in browser console if the page is reloaded or not after updating email in modal.
+
+```js script
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  console.info("This page is reloaded");
+} else {
+  console.info("This page is not reloaded");
+}
+```
+
 Go to your browser to view django website with locahost URL
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
